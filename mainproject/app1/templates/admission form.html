@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>{% load static %}
+  <title>Admission</title>
+  <link rel="stylesheet" href="{% static 'style1.css' %}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="background-color: black;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 70px;margin-top: 20px;">
+        <a class="navbar-brand" href="#">FITNESS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="web">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                More
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="admissionform">Admission form</a>
+                <a class="dropdown-item" href="feedback">Feed back</a>
+              </div>
+            </li>
+          </ul>
+          
+        </div>
+      </nav><br><br>
+      
+   
+      <form action="add" method="POST" autocomplete="off">
+                             {% csrf_token %}
+        <div class="container">
+          <h1 style="color: red;font-style: italic;font-size: 40px;">Admission Form</h1>
+          <p style="color: aliceblue;">Please fill in this form to create an account.</p>
+          <hr>
+          <label for="email" style="color: red;"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name" name="name"  required>
+          <label for="psw" style="color: red;"><b>Contact</b></label>
+          <input type="text" placeholder="Enter contact number" name="contact" id="psww" required>
+          <label for="email" style="color: red;"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" id="email" required>
+      
+          <label for="psw" style="color: red;"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" id="psw" required>
+      
+          <label for="psw-repeat" style="color: red;"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="pass01" id="psw-repeat" required>
+          <hr>
+      
+          <p style="color: aliceblue;">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+          <button type="submit" class="registerbtn" >Register</button>
+          
+              </div></div>
+       
+        <div class="container signin">
+          <p>Already have an account? <a href="#">Sign in</a>.</p>
+        </div></div> 
+      </form><br><br>
+    
+      <footer style="margin-top: 50px;">
+        <div style="float: left;padding-left: 20px;height: 300px;">
+          <h3 style="color: aliceblue;">Addrtess:</h3>
+          <p1 style="color: aliceblue;">xxxxxx</p1><br>
+          <p2 style="color: aliceblue;">xxxxxx</p2><br>
+          <p3 style="color: aliceblue;">dhdsn@gmail.com</p3><br>
+          <p5 style="color: aliceblue;">9499456892</p5>
+        </div>
+        <div style="float: left;padding-left: 20%;">
+          <h3 style="color: aliceblue;">Menu</h3>
+          <a href="web" style="color: aliceblue;">Home</a><br>
+          <a href="about" style="color: aliceblue;">About</a><br>
+          <a href="admissionform" style="color: aliceblue;">AdmissionForm</a><br>
+          <div style="margin-left: 500px;text-align: right;color: aliceblue;">
+            <h3 style="font-style: oblique;">Follow us:</h3>
+          <i class="fa fa-twitter" style="font-size:20px"></i>
+          <i class="fa fa-instagram" style="font-size:24px"></i>
+          <i class="fa fa-facebook-f" style="font-size:24px"></i>
+          <i class="fa fa-youtube-play" style="font-size:24px"></i>
+      
+        </div>
+        
+        </footer>
+      
+      
+      </body>
+      
+      </html>
+              

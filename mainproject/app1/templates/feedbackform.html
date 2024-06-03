@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>{% load static %}
+  <title>FEEDBACK</title>
+  <link rel="stylesheet" href="{% static 'style1.css' %}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="background-color: black;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 70px;margin-top: 20px;">
+        <a class="navbar-brand" href="#">FITNESS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="web">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                More
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="admissionform">Admission form</a>
+                <a class="dropdown-item" href="feedback">Feed back</a>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+      </nav><br><br>
+  <h2 style="font-size: 40px;color: red;font-style: oblique;text-align: center;">FEEDBACK FORM</h2><br><br>
+<div class="container">
+  <form action="add1" method="POST" autocomplete="off">>
+                         {% csrf_token %}
+    <div class="row">
+      <div class="col-25">
+        <label for="fname" style="color: red;font-size: 25px;font-style: oblique;">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="fname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname" style="color: red;font-size: 25px;font-style: oblique;">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+          <label for="contact" style="color: red;font-size: 25px;font-style: oblique;">contact</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="contact" name="contact" placeholder="your contact number...">
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject" style="color: red;font-size: 25px;font-style: oblique;">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div><br><br><br>
+<footer style="margin-top: 50px;">
+  <div style="float: left;padding-left: 20px;height: 300px;">
+    <h3 style="color: aliceblue;">Addrtess:</h3>
+    <p1 style="color: aliceblue;">xxxxxx</p1><br>
+    <p2 style="color: aliceblue;">xxxxxx</p2><br>
+    <p3 style="color: aliceblue;">dhdsn@gmail.com</p3><br>
+    <p5 style="color: aliceblue;">9499456892</p5>
+  </div>
+  <div style="float: left;padding-left: 20%;">
+    <h3 style="color: aliceblue;">Menu</h3>
+    <a href="web" style="color: aliceblue;">Home</a><br>
+    <a href="about" style="color: aliceblue;">About</a><br>
+    <a href="admissionform" style="color: aliceblue;">AdmissionForm</a><br>
+    <div style="margin-left: 500px;text-align: right;color: aliceblue;">
+      <h3 style="font-style: oblique;">Follow us:</h3>
+    <i class="fa fa-twitter" style="font-size:20px"></i>
+    <i class="fa fa-instagram" style="font-size:24px"></i>
+    <i class="fa fa-facebook-f" style="font-size:24px"></i>
+    <i class="fa fa-youtube-play" style="font-size:24px"></i>
+
+  </div>
+  
+ </footer>
+</body>
+</html>
